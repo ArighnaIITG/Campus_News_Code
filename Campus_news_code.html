@@ -1,591 +1,441 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale="1">
-     <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"> <!-- We will choose the sizes we want-->
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
- 
-    <!-- favicons code ends -->
-    <link type="text/plain" rel="author" href="humans.txt">
-    <title>IITG Campus Media</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Nunito:200,700" rel="stylesheet">
-    <!-- Bootstrap CCS library -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
-  
-    <link rel="stylesheet" type="text/css" href="home/home.min.css?v={b}"> 
-    <link rel="stylesheet" type="text/css" href="common/common.min.css?v={b}"> 
-</head>
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Campus NewsRoom</title>
 
-    <div id="preloader">
-    <div id="status">
-      <div class="loader"> 
-        <img src="###" class="blank" alt="Oscilloscope"> 
-      </div>
-      <p>Unleashing the news stack</p>
-    </div>
-    </div>
-    
-    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,800,900" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <header>
+      <nav class="navbar navbar-inverse navbar-fixed-top header-menu">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img class="image-large" src="images/logo.png">
+            <img class="image-small" src="images/logo-small.png">
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse ">
+          <ul class="nav navbar-nav">
+            <li id="firstNavLi"><a href="#about">Campus</a></li>
+            <li><a href="#contact">Sports</a></li>
+            <li><a href="#contact">Cultural</a></li>
+            <li><a href="#contact">Tech & Science</a></li>
+            <li><a href="#contact">Announcements</a></li>
+            <li><a href="#contact">Policies</a></li>
+            <li><a href="#contact">Opinion</a></li>
+            <li><a href="#contact"><i class="fa fa-search fa-lg" aria-hidden="true"></i></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li id='navr1li'>
+              <a id="navr1" href="#">
+                <span id="subscribe">Subscribe</span><br />
+                  To NewsRoom
+              </a>
+            </li>
+            <li id="icon1"><a href="#"><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></a></li>
+            <li><a href="#">Sign In</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </nav>
+    </header>
     <div class="container-fluid">
-	<div class="row-fluid">
-		<div class="col-md12">
-            <nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>    
-                          <span class="icon-bar"></span>                        
-                    </button>
-                <a class="navbar-brand" href="index.html"><img src="<!--iitg logo in svg format-->" alt="logo"></a>
-                <a class="navbar-brand navbar-hide" href="https://www.facebook.com/iitgwt/"><i class="fa fa-facebook fa-lg"></i></a>
-                <a class="navbar-brand navbar-hide" href="#contact"><i class="fa fa-phone fa-lg"></i></a>
+        <section class="two-column-main">
+          <div class="row">
+          <div id="main-div1" class="col-md-9">
+            <article>
+                <div>
+                    <img class="img pull-right" src="images/caampus.jpg"/>
                 </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Academics <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="career.html">Career</a></li>
-                                <li><a href="Alumniconnect.html">Alumni Connect</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Campus<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="gymkhana.html">Gymkhana</a></li>
-                                <li><a href="cbs.html">IITG CBS</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="media.html">National Media</a></li>
-                        <li><a href="op-ed.html">Op-Ed</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right navbar-show">
-                            <li><a class="navbar-brand" href="https://www.facebook.com/Cepstrum/"><i class="fa fa-facebook fa-lg"></i></a></li>
-                            <li><a class="navbar-brand" href="#contact"><i class="fa fa-phone fa-lg"></i></a></li>
-      	             </ul>
+                <div class="main-title text-center">
+                  <a class="main-title3">World</a>
+                  <h1 class="main-title1">...</h1>
+                  <p>
+                    <!-- You can write some content here -->
+                  </p>
+                  <ul>
+                    <li class="bullet">
+                      <!-- Bullet options. Flexible. Can be increased in number. -->
+                    </li>
+                  </ul>
                 </div>
-            </nav>
-            <div class="carousel slide" id="carousel-325941">
-                    <ol class="carousel-indicators">
-                        <li class="active" data-slide-to="0" data-target="#carousel-325941">
-                        </li>
-                        <li data-slide-to="1" data-target="#carousel-325941">
-                        </li>
-                        <li data-slide-to="2" data-target="#carousel-325941">
-                        </li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img alt="Carousel Bootstrap First" src="http://lorempixel.com/output/sports-q-c-1600-500-1.jpg">
-                            <div class="carousel-caption">
-                                <h4>
-                                    First Thumbnail label
-                                </h4>
-                                <p>
-                                    ..........
-                                </p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img alt="Carousel Bootstrap Second" src="http://lorempixel.com/output/sports-q-c-1600-500-2.jpg">
-                            <div class="carousel-caption">
-                                <h4>
-                                    Second Thumbnail label
-                                </h4>
-                                <p>.........
-                                </p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img alt="Carousel Bootstrap Third" src="http://lorempixel.com/output/sports-q-c-1600-500-3.jpg">
-                            <div class="carousel-caption">
-                                <h4>
-                                    Third Thumbnail label
-                                </h4>
-                                <p>
-                                    .............
-                                </p>
-                            </div>
-                        </div>
-                    </div> <a class="left carousel-control" href="#carousel-325941" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-325941" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
-                <ul class="nav nav-tabs">
-                    <li class="active">
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Profile</a>
-                    </li>
-                    <li class="disabled">
-                        <a href="#">Messages</a>
-                    </li>
-                    <li class="dropdown pull-right">
-                         <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown<strong class="caret"></strong></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">Action</a>
-                            </li>
-                            <li>
-                                <a href="#">Another action</a>
-                            </li>
-                            <li>
-                                <a href="#">Something else here</a>
-                            </li>
-                            <li class="divider">
-                            </li>
-                            <li>
-                                <a href="#">Separated link</a>
-                            </li>
+              </article>
+              <article id="article2">
+                <div class="row">
+                  <div class="col-sm-6" id='twopack'>
+                    <div class="thumbnail text-center">
+                      <img alt='Picture' src="images/image1.png" />
+                      <div class="content">
+                        <a class="main-title3"><!-- Starting small heading --></a>
+                        <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                        <p><!-- Content--></p>
+                        <ul>
+                          <li class="bullet">
+                            <!-- Bullet option -->
+                          </li>
                         </ul>
-                    </li>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="thumbnail text-center">
+                      <img alt='Picture' src="images/image2.jpg" />
+                      <div class="content">
+                        <a class="main-title3"><!-- Starting small heading --></a>
+                        <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                        <p>
+			   <!-- Paragraph content -->
+			</p>
+                        <ul>
+                          <li class="bullet">
+                            <!-- Bullet option -->
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+          </div>
+          <div id="main-div2" class="col-md-3">
+            <h2 class="title-2nd-col">Latest Headlines</h2>
+            <ul class="side-menu">
+              <li class="bullet"><a><!-- Write headlines or latest announcements here --></a></li>
+              <li class="bullet"><a><!-- Write headlines or latest announcements here --></a></li>
+              <li class="bullet"><a><!-- Write headlines or latest announcements here --></a></li>
+              <li class="bullet"><a><!-- Write headlines or latest announcements here --></a></li>
+              <li class="bullet"><a><!-- Write headlines or latest announcements here --></a></li>
+              <li class="bullet"><a><!-- Write headlines or latest announcements here --></a></li>
+              <li class="bullet"><a><!-- Write headlines or latest announcements here --></a></li>
+            </ul>
+            <button id="btn-main1">See All Headlines</button>
+          </div>
+        </div>
+        </section>
+        <section class="one-column">
+          <div class="container-fluid">
+            <div class="row tercial-content">
+              <div class="col-md-9 col-sm-12" id="sixpack">
+                <ul>
+                  <li>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="thumbnail text-center">
+                        <img alt="picture" src="images/image3.jpg" />
+                        <div class="content">
+                          <a class="main-title3"><!-- Starting small heading --></a>
+                          <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                          <p><!-- Paragraph content --></p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li >
+                    <div class="col-md-4 col-sm-6">
+                      <div class="thumbnail text-center">
+                        <img alt="picture" src="images/image4.jpg" />
+                        <div class="content">
+                          <a class="main-title3"><!-- Starting small heading --></a>
+                          <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                          <p><!-- Paragraph content --></p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-md-4 hidden-sm hidden-xs">
+                      <div class="thumbnail text-center">
+                        <img alt="picture" src="images/image5.jpg" />
+                        <div class="content">
+                          <a class="main-title3"><!-- Starting small heading --></a>
+                          <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                          <p><!-- Paragraph content --></p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
+              </div>
+                <div class="col-md-3 hidden-xs hidden-sm">
+                  <div class="thumbnail text-center">
+	 	    <img alt="picture" src="images/image6.jpg" />
+                    <div class="content">
+                      <a class="main-title3"><!-- Starting small heading --></a>
+                      <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                      <p><!-- Paragraph content --></p>
+                    </div>
+                  </div>
+                </div>
             </div>
+              <div class="row tercial-content">
+                <div class="col-md-9 col-sm-12">
+                <ul>
+                  <li>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="thumbnail text-center">
+                        <div class="content">
+                          <a class="main-title3"><!-- Starting small heading --></a>
+                          <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                          <p><!-- Paragraph content --></p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="thumbnail text-center">
+                        <div class="content">
+                          <a class="main-title3"><!-- Starting small heading --></a>
+                          <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                          <p><!-- Paragraph content --></p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-md-4 col-sm-6">
+                      <div class="thumbnail text-center">
+                        <div class="content">
+                          <a class="main-title3"><!-- Starting small heading --></a>
+                          <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                          <p><!-- Paragraph content --></p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                </div>
+                <div class="col-md-3">
+                </div>
+              </div>
+              </ul>
+            </div>
+        </section>
+        <section class="legend-bottom">
+          <div class="container-fluid">
+            <div class="strike">
+              <span>In The Magazine</span>
+            </div>
+            <div class="row" >
+              <div class="col-md-3 col-sm-6">
+                <div class="thumbnail text-center">
+                    <img src="images/image7.jpg"/>
+                    <a class="main-title3"><!-- Starting small heading --></a>
+                    <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                    <p><!-- Paragraph content --></p>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="thumbnail text-center">
+                    <img src="images/image8.jpg"/>
+                    <a class="main-title3"><!-- Starting small heading --></a>
+                    <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                    <p><!-- Paragraph content --></p>
+                </div>
+              </div>
+              <div class="col-md-3 hidden-xs hidden-sm">
+                <div class="thumbnail text-center">
+                    <img src="images/image9.jpg"/>
+                    <a class="main-title3"><!-- Starting small heading --></a>
+                    <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                    <p><!-- Paragraph content --></p>
+                </div>
+              </div>
+              <div class="col-md-3 hidden-xs hidden-sm">
+                <div class="thumbnail text-center">
+                    <img src="images/image10.jpg"/>
+                    <a class="main-title3"><!-- Starting small heading --></a>
+                    <h3 class="secondary-content1"><!-- Heading of a column --></h3>
+                    <p><!-- Paragraph content --></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="monthly-issue">
+          <div class="container-fluid">
+            <div id="rowLast" class="row">
+              <div id="picturediv" class='col-md-9 col-sm-12 text-center'>
+                <button id="thisweek">This Week</button>
+                <h2>FROM THE ADMIN</h2>
+                <div class="row">
+                  <div class="col-sm-6 hidden-xs">
+                      <img class="img-responsive" id="newissue" src="images/image11.jpg" />
+                  </div>
+                  <div class="col-sm-6 col-xs-12">
+                    <ul class="newIssue">
+                      <li class="bullet"><a><!-- Bullet option --></a/></li>
+                      <li class="bullet"><a><!-- Bullet option --></a></li>
+                      <li class="bullet"><a><!-- Bullet option --></a></li>
+                    </ul>
+                    <button class="pull-left" id=bottomButton>See All</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-8 col-sm-6 col-md-3 col-xs-offset-3 col-sm-offset-4 col-md-offset-0">
+                <div class="row">
+                  <div class="col-xs-12">
+                      <a id="mread">MOST READ</a>
+                  </div>
+                </div>
+                <a id="firstA" class="thumbnail">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <img class="img-responsive" src="images/small_image1.jpg" />
+                    </div>
+                    <div class="col-xs-6">
+                      <p><!-- Just the heading --></p>
+                    </div>
+                  </div>
+                </a>
+                <a class="thumbnail">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <img class="img-responsive" src="images/small_image2.jpg" />
+                    </div>
+                    <div class="col-xs-6">
+                      <p><!-- Just the heading --></p>
+                    </div>
+                  </div>
+                </a>
+                <a class="thumbnail">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <img class="img-responsive" src="images/small_image3.jpg" />
+                    </div>
+                    <div class="col-xs-6">
+                      <p><!-- Just the heading --></p>
+                    </div>
+                  </div>
+                </a>
+                <a class="thumbnail">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <img class="img-responsive" src="images/small_image4.jpg" />
+                    </div>
+                    <div class="col-xs-6">
+                      <p><!-- Just the heading --></p>
+                    </div>
+                  </div>
+                </a>
+                <a class="thumbnail">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <img class="img-responsive" src="images/small_image5.jpg" />
+                    </div>
+                    <div class="col-xs-6">
+                      <p><!-- Just the heading --></p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+    <!--End container-fluid -->
+    </div>
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="images/footerPic1.png" />
+            <p class="copyright">© 2017 NEWRSROOM IITG</p>
+          </div>
+          <div id="socialFooter" class="col-sm-9">
+            <ul class="list-inline social col-md-6 col-xs-12 col-sm-12">
+              <li class="list-inline-item"><a class="facebook" href="www.facebook.com"></a></li>
+              <li class="list-inline-item"><a class="twitter" href="www.twitter.com"></a></li>
+              <li class="list-inline-item"><a class="google" href="www.google.com"></a></li>
+              <li class="list-inline-item"><a class="instagram" href="www.instagram.com"></a></li>
+              <li class="list-inline-item"><a class="tumblr" href="www.tumblr.com"></a></li>
+              <li class="list-inline-item"><a class="linkedin" href="www.linkedin.com"></a></li>
+	      <!-- Links need to be changed here -->
+            </ul>
+            <button class="btn-blue col-md-6 pull-right hidden-sm hidden-xs">Sign up For The NewsLetter</button>
+          </div>
         </div>
         <div class="row">
-		<div class="col-md-4">
-			<h3>
-				.......
-			</h3>
-			<div class="carousel slide" id="carousel-791871">
-				<ol class="carousel-indicators">
-					<li class="active" data-slide-to="0" data-target="#carousel-791871">
-					</li>
-					<li data-slide-to="1" data-target="#carousel-791871">
-					</li>
-					<li data-slide-to="2" data-target="#carousel-791871">
-					</li>
-				</ol>
-				<div class="carousel-inner">
-					<div class="item active">
-						<img alt="Carousel Bootstrap First" src="http://lorempixel.com/output/sports-q-c-1600-500-1.jpg">
-						<div class="carousel-caption">
-							<h4>
-								First Thumbnail label
-							</h4>
-							<p>
-								........
-							</p>
-						</div>
-					</div>
-					<div class="item">
-						<img alt="Carousel Bootstrap Second" src="http://lorempixel.com/output/sports-q-c-1600-500-2.jpg">
-						<div class="carousel-caption">
-							<h4>
-								Second Thumbnail label
-							</h4>
-							<p>
-								..........
-							</p>
-						</div>
-					</div>
-					<div class="item">
-						<img alt="Carousel Bootstrap Third" src="http://lorempixel.com/output/sports-q-c-1600-500-3.jpg">
-						<div class="carousel-caption">
-							<h4>
-								Third Thumbnail label
-							</h4>
-							<p>
-								.........
-							</p>
-						</div>
-					</div>
-				</div> <a class="left carousel-control" href="#carousel-791871" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-791871" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-			</div>
-			<dl>
-				<dt>
-					Description lists
-				</dt>
-				<dd>
-					....
-				</dd>
-				<dt>
-					....
-				</dt>
-				<dd>
-					.....
-				</dd>
-				<dd>
-					......
-				</dd>
-				<dt>
-					.......
-				</dt>
-				<dd>
-					.......
-				</dd>
-				<dt>
-					.........
-				</dt>
-				<dd>
-					.......
-				</dd>
-			</dl>
-		</div>
-		<div class="col-md-4">
-			<h3>
-				.......
-			</h3><img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				....
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-		<div class="col-md-4">
-			<h3>
-				.....
-			</h3>
-			<h2>
-				Heading
-			</h2>
-			<p>
-				.....
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-6">
-			<blockquote>
-				<p>
-					??Quote
-				</p> <small>Someone famous <cite>Source Title</cite></small>
-			</blockquote>
-		</div>
-		<div class="col-md-6">
-			<blockquote>
-				<p>
-					//Quote
-				</p> <small>Someone famous <cite>Source Title</cite></small>
-			</blockquote>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-3">
-			<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-		</div>
-		<div class="col-md-9">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				News
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-3">
-			<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
-		</div>
-		<div class="col-md-9">
-			<h2>
-				Heading
-			</h2>
-			<p>
-				News
-			</p>
-			<p>
-				<a class="btn" href="#">View details »</a>
-			</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/people-q-c-600-200-1.jpg">
-						<div class="caption">
-							<h3>
-								Thumbnail label
-							</h3>
-							<p>
-								News
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg">
-						<div class="caption">
-							<h3>
-								Thumbnail label
-							</h3>
-							<p>
-								News
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg">
-						<div class="caption">
-							<h3>
-								Thumbnail label
-							</h3>
-							<p>
-								News
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/people-q-c-600-200-1.jpg">
-						<div class="caption">
-							<h3>
-								Thumbnail label
-							</h3>
-							<p>
-								News
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail Second" src="http://lorempixel.com/output/city-q-c-600-200-1.jpg">
-						<div class="caption">
-							<h3>
-								Thumbnail label
-							</h3>
-							<p>
-								News
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img alt="Bootstrap Thumbnail Third" src="http://lorempixel.com/output/sports-q-c-600-200-1.jpg">
-						<div class="caption">
-							<h3>
-								Thumbnail label
-							</h3>
-							<p>
-								News
-							</p>
-							<p>
-								<a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="media">
-				 <a href="#" class="pull-left"><img alt="Bootstrap Media Preview" src="http://lorempixel.com/64/64/" class="media-object"></a>
-				<div class="media-body">
-					<h4 class="media-heading">
-						Nested media heading
-					</h4> News
-					<div class="media">
-						 <a href="#" class="pull-left"><img alt="Bootstrap Media Another Preview" src="http://lorempixel.com/64/64/" class="media-object"></a>
-						<div class="media-body">
-							<h4 class="media-heading">
-								Nested media heading
-							</h4> News
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="media">
-				 <a href="#" class="pull-left"><img alt="Bootstrap Media Preview" src="http://lorempixel.com/64/64/" class="media-object"></a>
-				<div class="media-body">
-					<h4 class="media-heading">
-						Nested media heading
-					</h4> News
-					<div class="media">
-						 <a href="#" class="pull-left"><img alt="Bootstrap Media Another Preview" src="http://lorempixel.com/64/64/" class="media-object"></a>
-						<div class="media-body">
-							<h4 class="media-heading">
-								Nested media heading
-							</h4> News
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					 
-					<address>
-						 <strong>Twitter, Inc.</strong><br> 795 Folsom Ave, Suite 600<br> San Francisco, CA 94107<br> <abbr title="Phone">P:</abbr> (123) 456-7890
-					</address>
-				</div>
-				<div class="col-md-3">
-					<ul>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-3">
-					<ul>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-						<li>
-							.....
-						</li>
-						<li>
-							...
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-3">
-					<h2>
-						Heading
-					</h2>
-					<p>
-						News
-					</p>
-					<p>
-						<a class="btn" href="#">View details »</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+          <div class="col-sm-3">
+            <ul class="menu">
+              <li><a>About us</a></li>
+              <li><a>Corrections</a></li>
+              <li><a>Contact Us</a></li>
+	      <li><a>Newsweek Media Group</a></li>
+              <li><a>Copyright</a></li>
+              <li><a>Privacy Policy</a></li>
+              <li><a>Terms of Service</a></li>
+              <li><a>Archive</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-9 magazine-issues">
+            <h3 class="hidden-xs" id="footerHeading">Recent Issues</h3>
+            <ul>
+              <li class="issue hidden-xs">
+                <div><img class="img-responsive" src="images/image15.jpg" /></div>
+                <div class="bullet"><a><!-- Title of a recent issue --></a></div>
+                <ul class="stories">
+                  <li><a><!-- Some points on it --></a></li>
+                  <li><a><!-- Some points on it --></a></li>
+                  <li><a><!-- Some points on it --></a></li>
+                </ul>
+              </li>
+              <li class="issue hidden-xs">
+                <div><img class="img-responsive" src="images/image16.jpg" /></div>
+                <div class="bullet"><a><!-- Title of a recent issue --></a></div>
+                <ul class="stories">
+                  <li><a><!-- Some points on it --></a></li>
+                  <li><a><!-- Some points on it --></a></li>
+                  <li><a><!-- Some points on it --></a></li>
+                </ul>
+              </li>
+              <li class="issue hidden-xs hidden-sm">
+                <div><img class="img-responsive" src="images/image17.jpg" /></div>
+                <div class="bullet"><a><!-- Title of a recent issue --></a></div>
+                <ul class="stories">
+                  <li><a><!-- Some points on it --></a></li>
+                  <li><a><!-- Some points on it --></a></li>
+                  <li><a><!-- Some points on it --></a></li>
+                </ul>
+              </li>
+              <li class="issue hidden-xs hidden-sm">
+                <div><img class="img-responsive" src="images/image18.jpg" /></div>
+                <div class="bullet"><a><!-- Title of a recent issue --></a></div>
+                <ul class="stories">
+                  <li><a><!-- Some points on it --></a></li>
+                  <li><a><!-- Some points on it --></a></li>
+                  <li><a><!-- Some points on it --></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    
